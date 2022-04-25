@@ -1,10 +1,13 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.svg" />
-    <h4>Select one communication mode:</h4>
-    <ul>
-      <li v-for="mode in modes" :key="mode"><mode-button :mode="mode" /></li>
-    </ul>
+    <div style="height: 32px" />
+    <div class="d-flex flex-column justify-space-between align-center">
+      <v-img width="300" src="../assets/logo.svg" cover></v-img>
+    </div>
+    <div style="height: 32px" />
+    <h3>Select one communication mode:</h3>
+    <div style="height: 16px" />
+    <mode-button v-for="mode in modes" :key="mode" :mode="mode" />
   </div>
 </template>
 

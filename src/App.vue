@@ -1,18 +1,34 @@
 <template>
-  <router-view />
+  <v-app>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style>
+<script>
+export default {
+  name: "App",
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style >
+:root {
+  --main-color: #ef4b59;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
+  padding: 0 2em;
+  height: 100;
 }
 
 nav a {
@@ -21,6 +37,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: var(--main-color);
 }
 </style>
