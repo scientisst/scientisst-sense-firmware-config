@@ -19,16 +19,23 @@
       defer
     ></script>
     <script
+      src="components/network_settings.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
       src="components/device_settings.js"
       type="text/javascript"
       defer
     ></script>
 
     <link rel="icon" href="assets/img/favicon.ico" />
-    <title>SENSE config - TCP</title>
+    <title>SENSE config - UDP</title>
   </head>
   <body>
     <page-scaffold>
+      <network-settings></network-settings>
+      <br />
       <device-settings></device-settings>
     </page-scaffold>
   </body>

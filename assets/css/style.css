@@ -1,52 +1,51 @@
 :root {
-    --main-color: #ef4b59;
-  }
+  --main-color: #ef4b59;
+}
 
 .button {
-    margin: 0.5rem;
-    padding: 1rem 3.5rem;
-    border: none;
-    cursor: pointer;
-    background: none;
-    text-align: center;
-    color: var(--main-color);
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0px 0px 0px 3px var(--main-color);
-    border-radius: 3px;
-  }
+  margin: 0.5rem;
+  padding: 1rem 3.5rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 0px 3px var(--main-color);
+  border-radius: 3px;
+}
+
+.submit {
+  color: white;
+  background-color: var(--main-color);
+}
 
 a:link {
-    color: var(--main-color) !important;
-    text-decoration: none;
+  color: var(--main-color) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-color) !important;
+  text-decoration: none;
 }
 
 .button:hover {
-box-shadow: 0px 0px 0px 9px #f37a8455, 0px 0px 0px 6px #f1626f55,
+  box-shadow: 0px 0px 0px 9px #f37a8455, 0px 0px 0px 6px #f1626f55,
     0px 0px 0px 3px var(--main-color);
 }
 
-.channel {  
-    label {
-      justify-content: center;
-      display: flex;
-      align-items:center;
-      width: 80px;
-      height: 80px;
-      background-color: #ef4b59;
-      color: #fff;
-      font-size: 2em;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-  
-    input {
-      display: none;
-      &:checked + label {
-        background-color: #888;     
-      }
-    }
-  }
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}

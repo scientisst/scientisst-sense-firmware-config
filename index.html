@@ -10,35 +10,46 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <link rel="icon" href="assets/img/favicon.ico">
     <title>SENSE config</title>
+
+    <script
+      src="components/page_scaffold.js"
+      type="text/javascript"
+      defer
+    ></script>
   </head>
-  <body style="width:100vw; height:100vh">
-    <div class="h-100 py-3 py-md-0 mt-md-0 d-flex justify-content-md-center justify-content-top align-items-center flex-column">
-      <div class="">
-        <img width="300" src="assets/img/logo.svg" cover></img>
+  <body>
+      <div style="width:100vw;height:100vh">
+        <div
+        class="w-100 h-100 px-3 px-md-0 py-2 py-md-0 mt-md-0 d-flex align-items-center flex-column
+      justify-content-md-center justify-content-top">
+        <div class="">
+          <img width="300" src="assets/img/logo.svg" cover></img>
+        </div>
+        <div style="height: 32px">
+        </div>
+        <h3>communication mode:</h3>
+        <div style="height: 16px">
+        </div>
+        <div class="w-100 d-flex flex-column flex-md-row justify-content-center">
+            <a href="tcp.html" class="button" >
+                TCP
+            </a>
+            <a href="udp.html" class="button">
+                UDP
+            </page>
+            <a href="bth.html" class="button">
+                BTH
+            </a>
+            <a href="usb.html" class="button">
+                USB
+            </a>
+            <a href="ble.html" class="button">
+                BLE
+            </a>
+        </div>
       </div>
-      <div style="height: 32px">
       </div>
-      <h4>Select one communication mode:</h4>
-      <div style="height: 16px">
-      </div>
-      <div class="w-100 px-3 px-md-0 d-flex flex-column flex-md-row justify-content-center">
-          <a href="tcp.html" class="button" >
-              TCP
-          </a>
-          <a href="udp.html" class="button">
-              UDP
-          </>
-          <a href="bth.html" class="button">
-              BTH
-          </a>
-          <a href="usb.html" class="button">
-              USB
-          </a>
-          <a href="ble.html" class="button">
-              BLE
-          </a>
-      </div>
-    </div>
   </body>
 </html>
