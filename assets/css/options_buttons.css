@@ -1,0 +1,36 @@
+.options-buttons {
+  display: flex;
+}
+.options-buttons input {
+  display: none;
+}
+
+.options-buttons input:checked + label {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.options-buttons label {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  color: var(--main-color);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 0px 3px var(--main-color);
+  border-radius: 3px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.options-buttons label:hover {
+  box-shadow: 0px 0px 0px 9px #f37a8455, 0px 0px 0px 6px #f1626f55,
+    0px 0px 0px 3px var(--main-color);
+  cursor: pointer;
+}
