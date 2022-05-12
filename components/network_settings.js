@@ -7,6 +7,7 @@ placeholder.innerHTML = `
   <div class="text-input">
     <input
     id="ssid"
+    name="ssid"
       class="input"
     />
   </div>
@@ -16,6 +17,7 @@ placeholder.innerHTML = `
   <div class="text-input">
     <input
       type="password"
+      name="password"
       id="password"
       class="input"
     />
@@ -26,6 +28,7 @@ placeholder.innerHTML = `
   <div class="text-input">
     <input
       id="host_ip"
+      name="host_ip"
       class="input"
     />
   </div>
@@ -35,6 +38,7 @@ placeholder.innerHTML = `
   <div class="text-input">
     <input
       id="port_number"
+      name="port_number"
       class="input"
     />
   </div>

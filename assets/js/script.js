@@ -12,11 +12,25 @@ function getDeviceData() {
 }
 
 $("#form").on("submit", function (e) {
-    e.preventDefault();//stop submit event
-    const self = $(this);//this form
-    $("#samplingRate").val(parseInt($("#sampingRate").val()));//change input
-    $("#channels").val("deneme");//change input
-    self.trigger();//submit form
+    const channelsButtons = [1, 2, 3, 4, 5, 6].map((channel) => {
+        return document.getElementById("ai" + channel);
+    });
+    const channels = []
+    channelsButtons.forEach((channel, index) => {
+        if (channel.checked) {
+            channels.push(index + 1);
+        }
+    });
+    $("#channels").val(channels);//change input
+
+    const digitalChannels = [];
+    $("#o1")[0].checked ? digitalChannels.push(1) : digitalChannels.push(0);
+    $("#o2")[0].checked ? digitalChannels.push(1) : digitalChannels.push(0);
+    $("#digital_channels").val(digitalChannels);//change input
+
+    const data = new FormData(e.target);
+    const value = Object.fromEntries(data.entries());
+    console.log(value);
 });
 
 // getDeviceData();

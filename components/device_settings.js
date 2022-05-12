@@ -7,11 +7,12 @@ placeholder.innerHTML = `
 >
   <h3>SAMPLING RATE</h3>
   <div class="text-input">
-    <input id="samplingRate" value="1000" type="number" class="input" min="1" max="16000" size="5" />
+    <input id="samplingRate" name="samplingRate" value="1000" type="number" class="input" min="1" max="16000" size="5" />
   </div>
   <div style="height: 16px"></div>
   <div id="channels-selector">
     <h3>CHANNELS</h3>
+    <input type="hidden" id="channels" name="channels" value="[1,2,3,4,5,6]" />
     <div
       class="buttons-row d-flex flex-wrap justify-content-center align-items-center"
     >
@@ -43,6 +44,7 @@ placeholder.innerHTML = `
   </div>
   <div id="digital-channels">
     <h3>DIGITAL CHANNELS</h3>
+    <input type="hidden" id="digital_channels" name="digital_channels" value="[1,2,3,4,5,6]" />
     <div
       class="buttons-row d-flex flex-wrap justify-content-center align-items-center"
     >
