@@ -12,16 +12,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/toggle_button.css" />
-    <link rel="stylesheet" href="assets/css/text_input.css" />
     <link rel="stylesheet" href="assets/css/options_buttons.css" />
+    <link rel="stylesheet" href="assets/css/text_input.css" />
 
     <script
       src="components/page_scaffold.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
-      src="components/device_settings.js"
       type="text/javascript"
       defer
     ></script>
@@ -35,37 +30,55 @@
     <title>SENSE config - TCP</title>
 
     <style>
-      #settings {
+      #network-settings {
         display: none;
       }
-      input[id="station"]:checked ~ #settings {
+      input[id="station"]:checked ~ #network-settings {
         display: block;
       }
     </style>
   </head>
   <body>
     <page-scaffold>
-      <form action="settingsDone" method="POST" id="settingsForm">
+      <form action="settingsDone" method="POST" id="form">
         <h3>Mode</h3>
+        <input type="hidden" id="mode" name="mode" value="tcp" />
         <div class="options-buttons" style="display: block">
-          <input id="soft_ap" name="mode" type="radio" checked />
+          <input
+            id="soft_ap"
+            name="tcp_mode"
+            type="radio"
+            value="soft"
+            checked
+          />
           <label for="soft_ap">Soft AP</label>
-          <input id="station" name="mode" type="radio" />
+          <input id="station" name="tcp_mode" type="radio" value="station" />
           <label for="station">Station</label>
-          <div id="settings">
-            <network-settings></network-settings>
-          </div>
+          <div id="network-settings"></div>
         </div>
         <h3>Acquisition Settings</h3>
         <div class="options-buttons">
-          <input id="start_now" name="start_when" type="radio" checked />
+          <input
+            id="start_now"
+            name="start_when"
+            type="radio"
+            value="now"
+            checked
+          />
           <label for="start_now">Start Immediately</label>
-          <input id="start_wait" name="start_when" type="radio" />
+          <input id="start_wait" name="start_when" type="radio" value="wait" />
           <label for="start_wait">Wait for Command</label>
         </div>
-        <device-settings id="device-settings"></device-settings>
+        <div id="device-settings"></div>
+        <div id="submit-buttons"></div>
       </form>
     </page-scaffold>
     <script src="assets/js/script.js" type="text/javascript"></script>
+    <script
+      src="components/network_settings.js"
+      type="text/javascript"
+    ></script>
+    <script src="components/device_settings.js" type="text/javascript"></script>
+    <script src="components/submit_buttons.js" type="text/javascript"></script>
   </body>
 </html>

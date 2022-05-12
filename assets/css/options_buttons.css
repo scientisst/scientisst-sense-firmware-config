@@ -1,16 +1,16 @@
 .options-buttons {
   display: flex;
 }
-.options-buttons input {
+.options-buttons > input {
   display: none;
 }
 
-.options-buttons input:checked + label {
+.options-buttons > input:checked + label {
   background-color: var(--main-color);
   color: white;
 }
 
-.options-buttons label {
+.options-buttons > label {
   margin: 0.5rem;
   padding: 0.5rem;
   border: none;
@@ -29,7 +29,7 @@
   user-select: none; /* Standard */
 }
 
-.options-buttons label:hover {
+.options-buttons > label:hover {
   box-shadow: 0px 0px 0px 9px #f37a8455, 0px 0px 0px 6px #f1626f55,
     0px 0px 0px 3px var(--main-color);
   cursor: pointer;

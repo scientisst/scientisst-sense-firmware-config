@@ -18,6 +18,11 @@
   border-radius: 3px;
 }
 
+button:focus {
+  border: none;
+  outline: none;
+}
+
 .submit {
   color: white;
   background-color: var(--main-color);

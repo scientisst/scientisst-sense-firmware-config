@@ -11,35 +11,43 @@ function getDeviceData() {
     return xmlHTTP.onreadystatechange();
 }
 
+$("#form").on("submit", function (e) {
+    e.preventDefault();//stop submit event
+    const self = $(this);//this form
+    $("#samplingRate").val(parseInt($("#sampingRate").val()));//change input
+    $("#channels").val("deneme");//change input
+    self.trigger();//submit form
+});
+
 // getDeviceData();
 
-setTimeout(() => {
-    const deviceSettings = document.getElementById("device-settings").shadowRoot;
-    const samplingRate = deviceSettings.getElementById("samplingRate");
-    const channelsButtons = [1, 2, 3, 4, 5, 6].map((channel) => {
-        return deviceSettings.getElementById("ai" + channel);
-    });
+// setTimeout(() => {
+//     const deviceSettings = document.getElementById("device-settings").shadowRoot;
+//     const samplingRate = deviceSettings.getElementById("samplingRate");
+//     const channelsButtons = [1, 2, 3, 4, 5, 6].map((channel) => {
+//         return deviceSettings.getElementById("ai" + channel);
+//     });
 
-    const submit = deviceSettings.getElementById("submit");
-    submit.addEventListener('click', async _ => {
-        const channels = []
-        channelsButtons.forEach((channel, index) => {
-            if (channel.checked) {
-                channels.push(index + 1);
-            }
-        });
-        data = {
-            samplingRate: parseInt(samplingRate.value),
-            channels: channels,
-        };
-        try {
-            const response = await fetch('settingsDone', {
-                method: 'post',
-                body: data,
-            });
-            console.log('Completed!', data, response);
-        } catch (err) {
-            console.error(`Error: ${err}`);
-        }
-    });
-}, 100)
+//     const submit = deviceSettings.getElementById("submit");
+//     submit.addEventListener('click', async _ => {
+//         const channels = []
+//         channelsButtons.forEach((channel, index) => {
+//             if (channel.checked) {
+//                 channels.push(index + 1);
+//             }
+//         });
+//         data = {
+//             samplingRate: parseInt(samplingRate.value),
+//             channels: channels,
+//         };
+//         try {
+//             const response = await fetch('settingsDone', {
+//                 method: 'post',
+//                 body: data,
+//             });
+//             console.log('Completed!', data, response);
+//         } catch (err) {
+//             console.error(`Error: ${err}`);
+//         }
+//     });
+// }, 100)

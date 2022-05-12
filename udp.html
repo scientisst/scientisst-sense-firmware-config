@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/toggle_button.css" />
+    <link rel="stylesheet" href="assets/css/text_input.css" />
 
     <script
       src="components/page_scaffold.js"
@@ -34,9 +35,13 @@
   </head>
   <body>
     <page-scaffold>
-      <network-settings></network-settings>
-      <br />
-      <device-settings id="device-settings"></device-settings>
+      <form action="settingsDone" method="POST" id="form">
+        <input type="hidden" id="mode" name="mode" value="udp" />
+        <div id="network-settings"></div>
+        <br />
+        <div id="device-settings"></div>
+        <div id="submit-buttons"></div>
+      </form>
     </page-scaffold>
 
     <script src="assets/js/script.js" type="text/javascript"></script>

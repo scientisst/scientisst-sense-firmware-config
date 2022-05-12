@@ -1,11 +1,5 @@
-const networkSettings = document.createElement('template');
-networkSettings.innerHTML = `
-<link rel="stylesheet" href="assets/css/bootstrap.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<link rel="stylesheet" href="assets/css/toggle_button.css" />
-<link rel="stylesheet" href="assets/css/text_input.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
-
+placeholder = document.getElementById("network-settings");
+placeholder.innerHTML = `
 <div id="network-settings" class="d-flex flex-column">
   <label for="ssid">
     <h3>Network SSID</h3>
@@ -47,16 +41,3 @@ networkSettings.innerHTML = `
   </div>
 </div>
 `;
-
-class NetworkSettings extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    shadowRoot.appendChild(networkSettings.content);
-  }
-}
-
-customElements.define('network-settings', NetworkSettings);

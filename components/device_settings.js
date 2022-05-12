@@ -1,9 +1,6 @@
-const deviceSettings = document.createElement('template');
-deviceSettings.innerHTML = `
-<link rel="stylesheet" href="assets/css/bootstrap.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<link rel="stylesheet" href="assets/css/toggle_button.css" />
-<link rel="stylesheet" href="assets/css/text_input.css" />
+placeholder = document.getElementById("device-settings");
+
+placeholder.innerHTML = `
 <div
   id="device-settings"
   class="d-flex flex-column align-items-center"
@@ -60,26 +57,4 @@ deviceSettings.innerHTML = `
     </div>
   </div>
 </div>
-<div style="height: 16px"></div>
-<div class="d-flex flex-column" id="form-buttons">
-  <button type="submit" class="button submit"
-   id="submit">Submit</button>
-  <div class="d-flex flex-row" />
-  <a href="index.html" class="button flex-grow-1"> Back </a>
-  <button class="button flex-grow-1">reset</button>
-</div>
-<br>
 `;
-
-class DeviceSettings extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    shadowRoot.appendChild(deviceSettings.content);
-  }
-}
-
-customElements.define('device-settings', DeviceSettings);
