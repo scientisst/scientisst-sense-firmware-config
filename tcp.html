@@ -44,7 +44,7 @@
   <body>
     <page-scaffold>
       <h2>TCP</h2>
-      <form action="http://localhost:8080" method="POST" id="form">
+      <form action="settingsDone" method="POST" id="form">
         <h3>Mode</h3>
         <input type="hidden" id="mode" name="mode" value="tcp" />
         <div class="options-buttons" style="display: block">
@@ -76,6 +76,7 @@
         <div id="device-settings"></div>
         <div id="submit-buttons"></div>
       </form>
+      <div id="footer"></div>
     </page-scaffold>
     <script src="assets/js/script.js" type="text/javascript"></script>
     <script
@@ -84,6 +85,7 @@
     ></script>
     <script src="components/device_settings.js" type="text/javascript"></script>
     <script src="components/submit_buttons.js" type="text/javascript"></script>
+    <script src="components/footer.js" type="text/javascript"></script>
     <script>
       // update first on mount
       $("#network_settings :input").prop("disabled", true);

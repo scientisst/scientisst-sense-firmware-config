@@ -12,7 +12,7 @@ function getDeviceData() {
 }
 
 $("#form").on("submit", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     const channelsButtons = [1, 2, 3, 4, 5, 6].map((channel) => {
         return document.getElementById("ai" + channel);
     });
@@ -29,9 +29,9 @@ $("#form").on("submit", function (e) {
     $("#o2")[0].checked ? digitalChannels.push(1) : digitalChannels.push(0);
     $("#digital_channels").val(digitalChannels);//change input
 
-    const data = new FormData(e.target);
-    const value = Object.fromEntries(data.entries());
-    console.log(value);
+    // const data = new FormData(e.target);
+    // const value = Object.fromEntries(data.entries());
+    // console.log(value);
 });
 
 // getDeviceData();
