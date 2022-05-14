@@ -1,6 +1,6 @@
 placeholder = document.getElementById("network-settings");
 placeholder.innerHTML = `
-<div id="network-settings" class="d-flex flex-column">
+<div id="network_settings" class="d-flex flex-column">
   <label for="ssid">
     <h3>Network SSID</h3>
   </label>
@@ -8,7 +8,8 @@ placeholder.innerHTML = `
     <input
     id="ssid"
     name="ssid"
-      class="input"
+    class="input"
+    required
     />
   </div>
   <label for="password">
@@ -20,6 +21,7 @@ placeholder.innerHTML = `
       name="password"
       id="password"
       class="input"
+      required
     />
   </div>
   <label for="host_ip">
@@ -30,6 +32,7 @@ placeholder.innerHTML = `
       id="host_ip"
       name="host_ip"
       class="input"
+      required
     />
   </div>
   <label for="port_number">
@@ -40,6 +43,8 @@ placeholder.innerHTML = `
       id="port_number"
       name="port_number"
       class="input"
+      type="number"
+      required
     />
   </div>
   </div>

@@ -10,6 +10,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+    <!-- JQuery -->
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/toggle_button.css" />
     <link rel="stylesheet" href="assets/css/text_input.css" />
@@ -19,22 +23,12 @@
       type="text/javascript"
       defer
     ></script>
-    <script
-      src="components/network_settings.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
-      src="components/device_settings.js"
-      type="text/javascript"
-      defer
-    ></script>
-
     <link rel="icon" href="assets/img/favicon.ico" />
     <title>SENSE config - UDP</title>
   </head>
   <body>
     <page-scaffold>
+      <h2>UDP</h2>
       <form action="settingsDone" method="POST" id="form">
         <input type="hidden" id="mode" name="mode" value="udp" />
         <div id="network-settings"></div>
@@ -45,5 +39,11 @@
     </page-scaffold>
 
     <script src="assets/js/script.js" type="text/javascript"></script>
+    <script
+      src="components/network_settings.js"
+      type="text/javascript"
+    ></script>
+    <script src="components/device_settings.js" type="text/javascript"></script>
+    <script src="components/submit_buttons.js" type="text/javascript"></script>
   </body>
 </html>

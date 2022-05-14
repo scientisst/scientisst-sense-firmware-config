@@ -12,6 +12,7 @@ function getDeviceData() {
 }
 
 $("#form").on("submit", function (e) {
+    e.preventDefault();
     const channelsButtons = [1, 2, 3, 4, 5, 6].map((channel) => {
         return document.getElementById("ai" + channel);
     });

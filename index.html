@@ -32,15 +32,15 @@
         <h3>communication mode</h3>
         <div style="height: 16px">
         </div>
+          <form action="settingsDone" method="POST" id="form" class="w-100">
         <div class="w-100 d-flex flex-column flex-md-row justify-content-center">
-          <form action="settingsDone" method="POST" id="settingsForm">
             <button type="button" class="button" onclick="window.location.href='tcp.html'">TCP</button>
             <button type="button" class="button" onclick="window.location.href='udp.html'">UDP</button>
             <button type="submit" name ="mode" class="button" id="bth-submit" value="bth">bth</button>
             <button type="submit" name ="mode" class="button" id="usb-submit" value="usb">USB</button>
             <button type="submit" name ="mode" class="button" id="ble-submit" value="ble">BLE</button>
-          </>
         </div>
+        </form>
       </div>
       </div>
   </body>
