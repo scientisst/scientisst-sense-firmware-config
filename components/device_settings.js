@@ -5,7 +5,7 @@ placeholder.innerHTML = `
   id="device_settings"
   class="d-flex flex-column align-items-center"
 >
-  <h3>SAMPLING RATE</h3>
+  <!-- <h3>SAMPLING RATE</h3>
   <div class="text-input">
     <input id="samplingRate" name="samplingRate" value="1000" type="number" class="input" min="1" max="16000" size="5" required/>
   </div>
@@ -57,6 +57,6 @@ placeholder.innerHTML = `
         <label for="o2">O2</label>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 `;

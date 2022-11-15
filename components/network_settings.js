@@ -17,11 +17,9 @@ placeholder.innerHTML = `
   </label>
   <div class="text-input">
     <input
-      type="password"
       name="password"
       id="password"
       class="input"
-      required
     />
   </div>
   <label for="host_ip">
